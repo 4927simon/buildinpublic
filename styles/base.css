@@ -507,7 +507,7 @@ img.emoji {
 }
 
 .gsc-comment {
-  @apply flex text-sm;
+  @apply flex text-base;
 }
 
 .gsc-main {
