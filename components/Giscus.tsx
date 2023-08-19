@@ -116,7 +116,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
 
       <div className="gsc-comments">
         <div className="gsc-header">
-          <div className="gsc-left-header pl-2">
+          <div className="gsc-left-header pl-2 pb-2">
             <span className="relative flex h-2.5 w-2.5 items-center justify-center">
               <span className="animate-ping transition duration-1000 delay-1000 ease-in-out absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
@@ -139,13 +139,15 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
             </h4>
             {shouldShowBranding ? (
               <>
-                <span className="color-text-secondary text-sm px-1">•</span>
-                <div className="color-text-secondary text-sm">Share your progress</div>
+                <div className="hidden lg:block">
+                  <span className="color-text-secondary text-sm px-1">•</span>
+                  <div className="color-text-secondary text-sm">Share your progress</div>
+                </div>
               </>
             ) : null}
           </div>
           {data.totalCommentCount > 0 ? (
-            <ul className="gsc-right-header BtnGroup">
+            <ul className="gsc-right-header BtnGroup hidden">
               <li
                 className={`BtnGroup-item ${orderBy === 'oldest' ? 'BtnGroup-item--selected' : ''}`}
                 aria-current={orderBy === 'oldest'}

@@ -168,7 +168,7 @@ export default function Home({
 
       <div className="color-text-primary w-full max-w-3xl mx-auto p-2 mb-32 relative min-h-[140px] flex justify-center">
         <img
-          className="img-fluid absolute top-20 -right-12 hidden lg:block"
+          className="img-fluid absolute top-28 -right-12 hidden lg:block"
           src="/img/shape.png"
           width="60"
           alt="shape"
