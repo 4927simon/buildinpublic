@@ -94,10 +94,6 @@ main .pagination-loader-container {
   background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
 }
 
-main .gsc-loading-image {
-
-}
-
 /*! Dark mode */
 @media (prefers-color-scheme: dark) {
   /*! MIT License
