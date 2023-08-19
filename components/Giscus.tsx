@@ -116,7 +116,11 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
 
       <div className="gsc-comments">
         <div className="gsc-header">
-          <div className="gsc-left-header">
+          <div className="gsc-left-header pl-2">
+            <span className="relative flex h-2.5 w-2.5 items-center justify-center">
+              <span className="animate-ping transition duration-1000 delay-1000 ease-in-out absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
             <h4 className="gsc-comments-count">
               {shouldCreateDiscussion && !data.totalCommentCount ? (
                 t('people are building in public today', { count: 0 })

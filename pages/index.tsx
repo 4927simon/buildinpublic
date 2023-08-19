@@ -125,7 +125,7 @@ export default function Home({
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
 
-      <section className="py-10 bg-white sm:pt-16">
+      <section className="py-8 bg-white sm:pt-12">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
             <div className="flex items-center justify-center">
@@ -162,7 +162,7 @@ export default function Home({
         </div>
       </section>
 
-      <div className="color-text-primary w-full max-w-3xl mx-auto p-2 mb-24 relative">
+      <div className="color-text-primary w-full max-w-3xl mx-auto p-2 mb-32 relative">
         <img
           className="img-fluid absolute top-20 -right-12 hidden lg:block"
           src="/img/shape.png"
