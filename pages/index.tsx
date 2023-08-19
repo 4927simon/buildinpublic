@@ -1,13 +1,13 @@
-//import { readFileSync } from 'fs';
-//import { join } from 'path';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ComponentProps, useContext, useEffect, useState } from 'react';
 import Comment from '../components/Comment';
-//import { Reactions } from '../lib/reactions';
-//import { IComment, IReactionGroups } from '../lib/types/adapter';
-//import { renderMarkdown } from '../services/github/markdown';
-//import { getAppAccessToken } from '../services/github/getAppAccessToken';
+import { Reactions } from '../lib/reactions';
+import { IComment, IReactionGroups } from '../lib/types/adapter';
+import { renderMarkdown } from '../services/github/markdown';
+import { getAppAccessToken } from '../services/github/getAppAccessToken';
 import { useDebounce } from '../lib/hooks';
 import Configuration from '../components/Configuration';
 import { ThemeContext } from '../lib/context';
@@ -16,35 +16,35 @@ import { ISetConfigMessage } from '../lib/types/giscus';
 import { getThemeUrl } from '../lib/utils';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import Router from 'next/router';
-//import getT from 'next-translate/getT';
+import getT from 'next-translate/getT';
 import { AvailableLanguage } from '../lib/i18n';
 import { env } from '../lib/variables';
-//import fallbacks from '../i18n.fallbacks.json';
+import fallbacks from '../i18n.fallbacks.json';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  //const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;
-  //const t = await getT(locale, 'config');
+  const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;
+  const t = await getT(locale, 'config');
 
-  //const path = join(process.cwd(), `README${localeSuffix}.md`);
-  //const readme = readFileSync(path, 'utf-8');
-  //const contents = '';
-  //const [afterConfig] = contents[1].split('<!-- end -->');
+  const path = join(process.cwd(), `README${localeSuffix}.md`);
+  const readme = readFileSync(path, 'utf-8');
+  const contents = readme.split('<!-- configuration -->');
+  const [afterConfig] = contents[1].split('<!-- end -->');
 
-  //contents[1] = `${afterConfig}\n## ${t('tryItOut')} 👇👇👇\n`;
+  contents[1] = `${afterConfig}\n## ${t('tryItOut')} 👇👇👇\n`;
 
-  //const token = await getAppAccessToken('giscus/giscus').catch(() => '');
-  //const [contentBefore, contentAfter] = await Promise.all(
-  //contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
-  //);
+  const token = await getAppAccessToken('giscus/giscus').catch(() => '');
+  const [contentBefore, contentAfter] = await Promise.all(
+    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
+  );
 
-  /*const comment: IComment = {
+  const comment: IComment = {
     author: {
       avatarUrl: 'https://avatars.githubusercontent.com/u/26596636?v=4',
       login: '4927simon',
       url: 'https://github.com/4927simon/buildinpublic',
     },
     authorAssociation: 'APP',
-    //bodyHTML: contentBefore,
+    bodyHTML: contentBefore,
     createdAt: '2023-08-19T13:21:14Z',
     deletedAt: null,
     id: 'onboarding',
@@ -61,12 +61,12 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     viewerDidAuthor: false,
     viewerHasUpvoted: false,
     viewerCanUpvote: false,
-  };*/
+  };
 
   return {
     props: {
-      //comment,
-      //contentAfter,
+      comment,
+      contentAfter,
       locale: locale as AvailableLanguage,
     },
   };
@@ -76,8 +76,8 @@ type DirectConfig = ComponentProps<typeof Configuration>['directConfig'];
 type DirectConfigHandler = ComponentProps<typeof Configuration>['onDirectConfigChange'];
 
 export default function Home({
-  //comment,
-  //contentAfter,
+  comment,
+  contentAfter,
   locale,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -129,15 +129,16 @@ export default function Home({
   return (
     <main className="gsc-homepage-bg min-h-screen w-full" data-theme={theme}>
       <Head>
-        <title>Build in public</title>
+        <title>giscus</title>
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
       <div className="color-text-primary w-full max-w-3xl mx-auto p-2">
-        <Comment comment={null}>
+        <Comment comment={comment}>
           <Configuration
             directConfig={directConfig}
             onDirectConfigChange={handleDirectConfigChange}
           />
+          <div className="markdown p-4 pt-0" dangerouslySetInnerHTML={{ __html: contentAfter }} />
         </Comment>
 
         <div id="comments" className="giscus w-full my-8" />
