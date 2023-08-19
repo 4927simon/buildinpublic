@@ -1,13 +1,7 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ComponentProps, useContext, useEffect, useState } from 'react';
 import Comment from '../components/Comment';
-import { Reactions } from '../lib/reactions';
-import { IComment, IReactionGroups } from '../lib/types/adapter';
-import { renderMarkdown } from '../services/github/markdown';
-import { getAppAccessToken } from '../services/github/getAppAccessToken';
 import { useDebounce } from '../lib/hooks';
 import Configuration from '../components/Configuration';
 import { ThemeContext } from '../lib/context';
@@ -20,45 +14,8 @@ import { AvailableLanguage } from '../lib/i18n';
 import { env } from '../lib/variables';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const path = join(process.cwd(), `README.md`);
-  const readme = readFileSync(path, 'utf-8');
-  const contents = readme.split('<!-- configuration -->');
-
-  const token = await getAppAccessToken('giscus/giscus').catch(() => '');
-  const [contentBefore, contentAfter] = await Promise.all(
-    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
-  );
-
-  const comment: IComment = {
-    author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/u/26596636?v=4',
-      login: '4927simon',
-      url: 'https://github.com/4927simon/buildinpublic',
-    },
-    authorAssociation: 'APP',
-    bodyHTML: contentBefore,
-    createdAt: '2023-08-19T13:21:14Z',
-    deletedAt: null,
-    id: 'onboarding',
-    isMinimized: false,
-    lastEditedAt: null,
-    reactions: Object.keys(Reactions).reduce((prev, key) => {
-      prev[key] = { count: 0, viewerHasReacted: false };
-      return prev;
-    }, {}) as IReactionGroups,
-    replies: [],
-    replyCount: 0,
-    upvoteCount: 0,
-    url: 'https://github.com/4927simon/buildinpublic',
-    viewerDidAuthor: false,
-    viewerHasUpvoted: false,
-    viewerCanUpvote: false,
-  };
-
   return {
     props: {
-      comment,
-      contentAfter,
       locale: locale as AvailableLanguage,
     },
   };
@@ -67,11 +24,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 type DirectConfig = ComponentProps<typeof Configuration>['directConfig'];
 type DirectConfigHandler = ComponentProps<typeof Configuration>['onDirectConfigChange'];
 
-export default function Home({
-  comment,
-  contentAfter,
-  locale,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({ locale }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { theme, setTheme } = useContext(ThemeContext);
   const [directConfig, setDirectConfig] = useState<DirectConfig>({
     theme: 'preferred_color_scheme',
@@ -125,12 +78,11 @@ export default function Home({
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
       <div className="color-text-primary w-full max-w-3xl mx-auto p-2">
-        <Comment comment={comment}>
+        <Comment comment={null}>
           <Configuration
             directConfig={directConfig}
             onDirectConfigChange={handleDirectConfigChange}
           />
-          <div className="markdown p-4 pt-0" dangerouslySetInnerHTML={{ __html: contentAfter }} />
         </Comment>
 
         <div id="comments" className="giscus w-full my-8" />
