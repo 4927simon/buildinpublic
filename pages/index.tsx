@@ -145,17 +145,16 @@ export default function Home({
         <Script
           src="/client.js"
           data-repo="4927simon/buildinpublic"
-          data-repo-id="R_kgDOKIz6vw="
-          data-category="announcements"
-          data-category-id="1"
-          data-mapping="specific"
-          data-term="Build in public"
-          data-theme="preferred_color_scheme"
+          data-repo-id="R_kgDOKIz6vw"
+          data-category="Announcements"
+          data-category-id="DIC_kwDOKIz6v84CYtIM"
+          data-mapping="pathname"
+          data-strict="0"
           data-reactions-enabled="1"
           data-emit-metadata="0"
-          data-input-position="top"
-          data-lang={locale}
-          data-strict="1"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
         />
       </div>
     </main>
