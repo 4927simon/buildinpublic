@@ -510,10 +510,6 @@ img.emoji {
   @apply flex text-sm;
 }
 
-.gsc-comment-content {
-  @apply text-base;
-}
-
 .gsc-main {
   @apply w-full flex flex-col gap-8;
 }
@@ -626,6 +622,11 @@ img.emoji {
 
 .gsc-comment-box-write {
   @apply rounded;
+}
+
+.gsc-comment-box,
+.gsc-comment-content {
+  @apply text-base;
 }
 
 .gsc-comment-box-write:focus-within {
