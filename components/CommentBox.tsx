@@ -226,7 +226,7 @@ export default function CommentBox({
         <div className="gsc-comment-box-buttons">
           {isReply ? (
             <button
-              className="ml-1 inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-dark transition-all duration-200 bg-gray-400 border border-transparent rounded-md focus:outline-none hover:bg-gray-500 focus:bg-gray-500"
+              className="ml-1 inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-dark transition-all duration-200 bg-gray-100 border border-transparent rounded-md focus:outline-none hover:bg-gray-200 focus:bg-gray-200"
               onClick={() => setIsReplyOpen(false)}
               type="button"
             >
