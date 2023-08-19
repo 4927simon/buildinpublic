@@ -125,7 +125,15 @@ export default function Home({
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
 
-      <section className="py-8 bg-white sm:pt-12">
+      <section className="py-8 bg-white sm:pt-12 relative">
+        <img
+          className="img-fluid absolute top-4 left-4"
+          src="/img/buildinpublic.svg"
+          width="50"
+          height="50"
+          alt="Build in public"
+        />
+
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
             <div className="flex items-center justify-center">
