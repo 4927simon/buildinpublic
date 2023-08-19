@@ -226,7 +226,7 @@ export default function CommentBox({
         <div className="gsc-comment-box-buttons">
           {isReply ? (
             <button
-              className="btn ml-1 rounded-md border"
+              className="ml-1 inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-dark transition-all duration-200 bg-gray-400 border border-transparent rounded-md focus:outline-none hover:bg-gray-500 focus:bg-gray-500"
               onClick={() => setIsReplyOpen(false)}
               type="button"
             >
@@ -235,7 +235,7 @@ export default function CommentBox({
           ) : null}
           {token ? (
             <button
-              className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700"
+              className="ml-1 inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700"
               type="submit"
               disabled={(token && !input.trim()) || isSubmitting}
             >
@@ -243,7 +243,7 @@ export default function CommentBox({
             </button>
           ) : (
             <a
-              className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700 inline-flex hover:no-underline"
+              className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700 inline-flex hover:no-underline"
               target="_top"
               href={loginUrl}
             >
