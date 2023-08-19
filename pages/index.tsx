@@ -19,13 +19,11 @@ import Router from 'next/router';
 import getT from 'next-translate/getT';
 import { AvailableLanguage } from '../lib/i18n';
 import { env } from '../lib/variables';
-import fallbacks from '../i18n.fallbacks.json';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const localeSuffix = locale === 'en' ? '' : `.${fallbacks[locale] ?? locale}`;
   const t = await getT(locale, 'config');
 
-  const path = join(process.cwd(), `README${localeSuffix}.md`);
+  const path = join(process.cwd(), `README.md`);
   const readme = readFileSync(path, 'utf-8');
   const contents = readme.split('<!-- configuration -->');
   const [afterConfig] = contents[1].split('<!-- end -->');
