@@ -148,7 +148,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
               </>
             ) : null}
             {shouldShowBranding ? (
-              <em className="color-text-secondary text-sm">Share your progress</em>
+              <span className="color-text-secondary text-sm">Share your progress</span>
             ) : null}
           </div>
           {data.totalCommentCount > 0 ? (

@@ -73,7 +73,6 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 }
 
 type DirectConfig = ComponentProps<typeof Configuration>['directConfig'];
-type DirectConfigHandler = ComponentProps<typeof Configuration>['onDirectConfigChange'];
 
 export default function Home({
   comment,
@@ -81,7 +80,7 @@ export default function Home({
   locale,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { theme, setTheme } = useContext(ThemeContext);
-  const [directConfig, setDirectConfig] = useState<DirectConfig>({
+  const [directConfig] = useState<DirectConfig>({
     theme: 'preferred_color_scheme',
     themeUrl: `${env.app_host}/themes/custom_example.css`,
     reactionsEnabled: true,
@@ -91,9 +90,6 @@ export default function Home({
   });
   const themeUrl = useDebounce(directConfig.themeUrl);
   const configTheme = getThemeUrl(directConfig.theme, themeUrl);
-
-  const handleDirectConfigChange: DirectConfigHandler = (key, value) =>
-    setDirectConfig({ ...directConfig, [key]: value });
 
   useEffect(() => {
     setTheme(configTheme);
@@ -134,10 +130,6 @@ export default function Home({
       </Head>
       <div className="color-text-primary w-full max-w-3xl mx-auto p-2">
         <Comment comment={comment}>
-          <Configuration
-            directConfig={directConfig}
-            onDirectConfigChange={handleDirectConfigChange}
-          />
           <div className="markdown p-4 pt-0" dangerouslySetInnerHTML={{ __html: contentAfter }} />
         </Comment>
 
