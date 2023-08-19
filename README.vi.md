@@ -1,26 +1,26 @@
 # [giscus][giscus]
 
-A comments system powered by [GitHub Discussions][discussions]. Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by [utterances][utterances].
+Hệ thống bình luận được cung cấp bởi [GitHub Discussions][discussions]. Hãy để mọi người truy cập để lại bình luận và reactions trên website của bạn thông qua GitHub! Truyền cảm hứng bởi [utterances][utterances].
 
 - [Open source][repo]. 🌏
-- No tracking, no ads, always free. 📡 🚫
-- No database needed. All data is stored in GitHub Discussions. :octocat:
-- Supports [custom themes][creating-custom-themes]! 🌗
-- Supports [multiple languages][multiple-languages]. 🌐
+- Không theo dõi, không có quảng cáo, luôn luôn miễn phí. 📡 🚫
+- Không cần cơ sở dữ liệu. Tất cả dữ liệu được lưu trữ trong GitHub Discussions. :octocat:
+- Hỗ trợ [tuỳ chỉnh themes][creating-custom-themes]! 🌗
+- Hỗ trợ [đa ngôn ngữ][multiple-languages]. 🌐
 - [Extensively configurable][advanced-usage]. 🔧
-- Automatically fetches new comments and edits from GitHub. 🔃
-- [Can be self-hosted][self-hosting]! 🤳
+- Tự động tìm nạp các nhận xét và chỉnh sửa mới từ GitHub. 🔃
+- [Có thể tự lưu trữ][self-hosting]! 🤳
 
-> **Note**
-> giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of giscus may break or change over time.
+> **Chú thích:**\
+> giscus vẫn đang được phát triển tích cực. GitHub cũng vẫn đang tích cực phát triển Discussions và API của nó. Do đó, một số tính năng của giscus có thể bị lỗi hoặc thay đổi theo thời gian.
 
-## How it works
+## Cách mà Giscus hoạt động
 
-When giscus loads, the [GitHub Discussions search API][search-api] is used to find the Discussion associated with the page based on a chosen mapping (URL, `pathname`, `<title>`, etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction.
+Khi giscus loads, [GitHub Discussions tìm kiếm API][search-api] được sử dùng để tìm Discussion được liên kết với trang dựa trên mapping đã chọn(URL, `pathname`, `<title>`, v.v..). Nếu không tìm thấy discussion phù hợp, bot giscus sẽ tự động tạo discussion vào lần đầu tiên ai đó để lại bình luận hoặc reaction.
 
-To comment, visitors must authorize the [giscus app][giscus-app] to [post on their behalf][authorization] using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
+Để mà bình luận, người muốn bình luận phải authorize cho [giscus app][giscus-app] thành [đăng trên danh nghĩa của họ][authorization] sử dụng luồng OAuth của GitHub. Ngoài ra, khách truy cập có thể nhận xét trực tiếp trên Discussion GitHub. Bạn có thể kiểm duyệt các bình luận trên GitHub.
 
-[giscus]: https://giscus.app
+[giscus]: https://giscus.app/vi
 [discussions]: https://docs.github.com/en/discussions
 [utterances]: https://github.com/utterance/utterances
 [repo]: https://github.com/giscus/giscus
@@ -34,19 +34,19 @@ To comment, visitors must authorize the [giscus app][giscus-app] to [post on the
 
 <!-- configuration -->
 
-If you're using giscus, consider [starring 🌟 giscus on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
+Nếu bạn đang sử dụng giscus, hãy cân nhắc [tặng 🌟 giscus trên GitHub][repo] và thêm [`giscus`][giscus-topic] topic [đến repository của bạn][topic-howto]! 🎉
 
-## Advanced usage
+## Cách sử dụng nâng cao
 
-You can add additional configurations (e.g. allowing specific origins) by following the [advanced usage guide][advanced-usage].
+Bạn có thể thêm các cài đặt bổ sung (ví dụ: allowing specific origins) bằng cách làm theo [hướng dẫn sử dụng nâng cao][advanced-usage].
 
-To use giscus with React, Vue, or Svelte, check out the [giscus component library][giscus-component].
+Để sử dụng giscus với React, Vue hoặc Svelte, hãy xem ở đây [Thư viện giscus component][giscus-component].
 
 ## Migrating
 
-If you've previously used other systems that utilize GitHub Issues (e.g. [utterances][utterances], [gitalk][gitalk]), you can [convert the existing issues into discussions][convert]. After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
+Nếu trước đây bạn đã sử dụng các hệ thống khác sử dụng GitHub Issues(ví dụ như: [utterances][utterances], [gitalk][gitalk]), Bạn có thể [chuyển đổi các issues hiện có thành discussions][convert]. Sau khi chuyển đổi, chỉ cần đảm bảo rằng việc mapping giữa các tiêu đề discussion và các trang là chính xác, sau đó giscus sẽ tự động sử dụng các discussion.
 
-## Sites using giscus
+## Các website sử dụng giscus
 
 - [laymonage.com][laymonage-website]
 - [os.phil-opp.com][os-phil-opp]
@@ -56,7 +56,7 @@ If you've previously used other systems that utilize GitHub Issues (e.g. [uttera
 
 ## Contributing
 
-See [CONTRIBUTING.md][contributing]
+Xem [CONTRIBUTING.md][contributing]
 
 [giscus-component]: https://github.com/giscus/giscus-component
 [repo]: https://github.com/giscus/giscus
@@ -76,7 +76,7 @@ See [CONTRIBUTING.md][contributing]
 
 ---
 
-This README is available in:
+README này có sẵn trong:
 
 - [Arabic (العربية)](README.ar.md)
 - [Català](README.ca.md)
@@ -102,6 +102,7 @@ This README is available in:
 - [Українська](README.uk.md)
 - [简体中文](README.zh-CN.md)
 - [繁體中文](README.zh-TW.md)
+
 
 [![Powered by Vercel](public/powered-by-vercel.svg)][vercel]
 

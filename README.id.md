@@ -1,26 +1,26 @@
 # [giscus][giscus]
 
-A comments system powered by [GitHub Discussions][discussions]. Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by [utterances][utterances].
+Sebuah sistem komentar yang diberdayakan oleh [GitHub Discussions][discussions]. Memungkinkan pengunjung meninggalkan komentar dan reaksi pada website Anda melalui GitHub! Terinspirasi dari [utterances][utterances].
 
-- [Open source][repo]. 🌏
-- No tracking, no ads, always free. 📡 🚫
-- No database needed. All data is stored in GitHub Discussions. :octocat:
-- Supports [custom themes][creating-custom-themes]! 🌗
-- Supports [multiple languages][multiple-languages]. 🌐
-- [Extensively configurable][advanced-usage]. 🔧
-- Automatically fetches new comments and edits from GitHub. 🔃
-- [Can be self-hosted][self-hosting]! 🤳
+- [Bersumber terbuka][repo]. 🌏
+- Tidak ada pelacakan, tidak ada iklan, selalu gratis. 📡 🚫
+- Tidak perlu basis data. Semua data disimpan di GitHub Discussions. :octocat:
+- Mendukung [tema buatan sendiri][creating-custom-themes]! 🌗
+- Mendukung [banyak bahasa][multiple-languages]. 🌐
+- [Dapat dikonfigurasi secara luas][advanced-usage]. 🔧
+- Otomatis mengambil komentar dan perubahan baru dari GitHub. 🔃
+- [Dapat diinangkan sendiri][self-hosting]! 🤳
 
-> **Note**
-> giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of giscus may break or change over time.
+> **Catatan:**\
+> giscus masih sedang dalam pengembangan aktif. GitHub juga masih aktif mengembangkan Discussions dan API-nya. Oleh karena itu, beberapa fitur giscus mungkin rusak atau berubah seiring waktu.
 
-## How it works
+## Cara kerja
 
-When giscus loads, the [GitHub Discussions search API][search-api] is used to find the Discussion associated with the page based on a chosen mapping (URL, `pathname`, `<title>`, etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction.
+Ketika giscus dimuat, [API pencarian GitHub Discussions][search-api] digunakan untuk mencari diskusi yang terkait dengan halaman penyemat berdasarkan pemetaan yang dipilih (URL, `pathname`, `<title>`, dll.). Jika diskusi yang terkait tidak ditemukan, bot giscus akan otomatis membuat diskusinya ketika ada orang yang meninggalkan komentar atau reaksi untuk pertama kalinya.
 
-To comment, visitors must authorize the [giscus app][giscus-app] to [post on their behalf][authorization] using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
+Untuk berkomentar, pengunjung harus mengizinkan [aplikasi giscus][giscus-app] untuk [berkomentar atas nama mereka][authorization] menggunakan alur GitHub OAuth. Atau, pengunjung dapat meninggalkan komentar pada diskusinya secara langsung di GitHub. Anda dapat memoderasi komentarnya di GitHub.
 
-[giscus]: https://giscus.app
+[giscus]: https://giscus.app/id
 [discussions]: https://docs.github.com/en/discussions
 [utterances]: https://github.com/utterance/utterances
 [repo]: https://github.com/giscus/giscus
@@ -34,29 +34,29 @@ To comment, visitors must authorize the [giscus app][giscus-app] to [post on the
 
 <!-- configuration -->
 
-If you're using giscus, consider [starring 🌟 giscus on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
+Jika Anda menggunakan giscus, pertimbangkan untuk [menambahkan bintang 🌟 giscus di GitHub][repo] dan menambahkan topic [`giscus`][giscus-topic] pada [repositori Anda][topic-howto]! 🎉
 
-## Advanced usage
+## Penggunaan lanjutan
 
-You can add additional configurations (e.g. allowing specific origins) by following the [advanced usage guide][advanced-usage].
+Anda dapat menambahkan konfigurasi tambahan (contoh: hanya mengizinkan situs tertentu) dengan mengikuti [panduan penggunaan lanjutan][advanced-usage].
 
-To use giscus with React, Vue, or Svelte, check out the [giscus component library][giscus-component].
+Untuk menggunakan giscus dengan React, Vue, atau Svelte, cek [pustaka komponen giscus][giscus-component].
 
-## Migrating
+## Migrasi
 
-If you've previously used other systems that utilize GitHub Issues (e.g. [utterances][utterances], [gitalk][gitalk]), you can [convert the existing issues into discussions][convert]. After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
+Apabila Anda sebelumnya menggunakan sistem lain yang menggunakan GitHub Issues (misal: [utterances][utterances], [gitalk][gitalk]), Anda dapat [mengkonversi isu yang sudah ada menjadi diskusi][convert]. Setelah proses konversi, pastikan bahwa pemetaan antara judul diskusi dengan halaman-halamannya sudah benar, dan giscus akan otomatis menggunakan diskusinya.
 
-## Sites using giscus
+## Situs yang menggunakan giscus
 
 - [laymonage.com][laymonage-website]
 - [os.phil-opp.com][os-phil-opp]
 - [Stats and R][statsandr]
 - [Tech Debt Burndown Podcast][techdebtburndown]
-- [**and many more!**][giscus-topic]
+- [**dan masih banyak yang lainnya!**][giscus-topic]
 
-## Contributing
+## Berkontribusi
 
-See [CONTRIBUTING.md][contributing]
+Lihat [CONTRIBUTING.md][contributing]
 
 [giscus-component]: https://github.com/giscus/giscus-component
 [repo]: https://github.com/giscus/giscus
@@ -76,7 +76,7 @@ See [CONTRIBUTING.md][contributing]
 
 ---
 
-This README is available in:
+README ini tersedia dalam bahasa:
 
 - [Arabic (العربية)](README.ar.md)
 - [Català](README.ca.md)

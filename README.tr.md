@@ -1,26 +1,26 @@
 # [giscus][giscus]
 
-A comments system powered by [GitHub Discussions][discussions]. Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by [utterances][utterances].
+[GitHub Discussions][discussions] tarafından sağlanan bir yorum sistemi. Ziyaretçilerinizin GitHub üzerinden yorum ve tepki bırakmasını sağlayın! [utterances][utterances] tarafından büyük ölçüde ilham alındı.
 
-- [Open source][repo]. 🌏
-- No tracking, no ads, always free. 📡 🚫
-- No database needed. All data is stored in GitHub Discussions. :octocat:
-- Supports [custom themes][creating-custom-themes]! 🌗
-- Supports [multiple languages][multiple-languages]. 🌐
-- [Extensively configurable][advanced-usage]. 🔧
-- Automatically fetches new comments and edits from GitHub. 🔃
-- [Can be self-hosted][self-hosting]! 🤳
+- [Açık kaynak][repo]. 🌏
+- İzleme yok, reklam yok, daima ücretsiz. 📡 🚫
+- Veri tabanına ihtiyaç yok. Tüm veri GitHub Discussions üzerinde depolanıyor. :octocat:
+- [Özel tema][creating-custom-themes] destekli! 🌗
+- [Birden fazla dil][multiple-languages] destekli. 🌐
+- [Kapsamlı şekilde ayarlanabilir][advanced-usage]. 🔧
+- Yeni yorum ve düzenlemeler otomatik olarak GitHub'dan çekiliyor. 🔃
+- [Şahsi olarak barındırılabilir][self-hosting]! 🤳
 
-> **Note**
-> giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of giscus may break or change over time.
+> **Not:**\
+> giscus hâlâ aktif olarak geliştiriliyor. GitHub da aktif olarak GitHub Discussions ve API'ını geliştiriyiror. Nitekim, giscus'ın özellikleri zamanla değişebilir veya bozulabilir.
 
-## How it works
+## Nasıl çalışır
 
-When giscus loads, the [GitHub Discussions search API][search-api] is used to find the Discussion associated with the page based on a chosen mapping (URL, `pathname`, `<title>`, etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction.
+Giscus yüklendiğinde, [GitHub Discussions arama API'ı][search-api] kullanılarak seçilen bağlantı yöntemi (URL, `pathname`, `<title>`, vb.) ile uyuşan tartışma bulunur. Uyumlu tartışma bulunamazsa, giscus bot birisi yorum veya tepki bıraktığında otomatik olarak bir tartışma oluşturur.
 
-To comment, visitors must authorize the [giscus app][giscus-app] to [post on their behalf][authorization] using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
+Yorum yapmak için, ziyaretçiler [giscus uygulaması][giscus-app]nı [kendi adlarına yazmak][authorization] için GitHub OAuth üzerinden yetkilendirmeli. Alternatif olarak, ziyaretçiler direkt olarak GitHub Discussions üzerinden yorum yapabilirler. Yorumları GitHub üzerinden yönetebilirsiniz.
 
-[giscus]: https://giscus.app
+[giscus]: https://giscus.app/tr
 [discussions]: https://docs.github.com/en/discussions
 [utterances]: https://github.com/utterance/utterances
 [repo]: https://github.com/giscus/giscus
@@ -34,29 +34,29 @@ To comment, visitors must authorize the [giscus app][giscus-app] to [post on the
 
 <!-- configuration -->
 
-If you're using giscus, consider [starring 🌟 giscus on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
+Giscus'ı kullanıyorsanız, [GitHub'da yıldız 🌟 vermeyi][repo] ve [`giscus`][giscus-topic] başlığını [deponuza eklemeyi][topic-howto] düşünün! 🎉
 
-## Advanced usage
+## Gelişmiş kullanım
 
-You can add additional configurations (e.g. allowing specific origins) by following the [advanced usage guide][advanced-usage].
+[Gelişmiş kullanım rehberi][advanced-usage]ni takip ederek ek yapılandırmalar (bkz. belirli kaynaklara izin vermek) ekleyebilirsiniz.
 
-To use giscus with React, Vue, or Svelte, check out the [giscus component library][giscus-component].
+Giscus'ı React, Vue veya Svelte ile kullanmak için [giscus bileşen kütüphanesi][giscus-component]ne göz atın.
 
-## Migrating
+## Geçiş yapma
 
-If you've previously used other systems that utilize GitHub Issues (e.g. [utterances][utterances], [gitalk][gitalk]), you can [convert the existing issues into discussions][convert]. After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
+Önceden GitHub Issues kullanan sistemler kullandıysanız (bkz. [utterances][utterances], [gitalk][gitalk]), [bu sorunları tartışmalara çevirebilirsiniz][convert]. Çevirdikten sonra, tartışma başlıklarıyla sayfa bağlantılarının doğru olduğundan emin olduktan sonra, giscus otomatik olarak tartışmaları kullanacaktır.
 
-## Sites using giscus
+## Giscus kullanan siteler
 
 - [laymonage.com][laymonage-website]
 - [os.phil-opp.com][os-phil-opp]
 - [Stats and R][statsandr]
 - [Tech Debt Burndown Podcast][techdebtburndown]
-- [**and many more!**][giscus-topic]
+- [**ve çok daha fazlası!**][giscus-topic]
 
-## Contributing
+## Katkı sağlama
 
-See [CONTRIBUTING.md][contributing]
+[CONTRIBUTING.md][contributing] yazısını inceleyin
 
 [giscus-component]: https://github.com/giscus/giscus-component
 [repo]: https://github.com/giscus/giscus
@@ -76,7 +76,7 @@ See [CONTRIBUTING.md][contributing]
 
 ---
 
-This README is available in:
+README şu dillerde de mevcut:
 
 - [Arabic (العربية)](README.ar.md)
 - [Català](README.ca.md)
@@ -103,6 +103,6 @@ This README is available in:
 - [简体中文](README.zh-CN.md)
 - [繁體中文](README.zh-TW.md)
 
-[![Powered by Vercel](public/powered-by-vercel.svg)][vercel]
+[![Vercel tarafından sağlanıyor](public/powered-by-vercel.svg)][vercel]
 
 [vercel]: https://vercel.com/?utm_source=giscus&utm_campaign=oss

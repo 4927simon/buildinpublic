@@ -1,26 +1,26 @@
 # [giscus][giscus]
 
-A comments system powered by [GitHub Discussions][discussions]. Let visitors leave comments and reactions on your website via GitHub! Heavily inspired by [utterances][utterances].
+利用 [GitHub Discussions][discussions] 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目深受 [utterances][utterances] 的启发。
 
-- [Open source][repo]. 🌏
-- No tracking, no ads, always free. 📡 🚫
-- No database needed. All data is stored in GitHub Discussions. :octocat:
-- Supports [custom themes][creating-custom-themes]! 🌗
-- Supports [multiple languages][multiple-languages]. 🌐
-- [Extensively configurable][advanced-usage]. 🔧
-- Automatically fetches new comments and edits from GitHub. 🔃
-- [Can be self-hosted][self-hosting]! 🤳
+- [开源][repo]。🌏
+- 无跟踪，无广告，永久免费。📡 🚫
+- 无需数据库。所有数据均储存在 GitHub Discussions 中。:octocat:
+- 支持[自定义主题][creating-custom-themes]！🌗
+- 支持[多种语言][multiple-languages]。🌐
+- [高可配置性][advanced-usage]。🔧
+- 自动从 GitHub 拉取新评论与编辑。🔃
+- [可自建服务][self-hosting]！🤳
 
-> **Note**
-> giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of giscus may break or change over time.
+> **注意：**\
+> giscus 仍处于活跃开发中，GitHub 也还在活跃地开发 Discussions 及其 API，因此一些 giscus 的特性可能随时间损坏或变更。
 
-## How it works
+## 它如何运作
 
-When giscus loads, the [GitHub Discussions search API][search-api] is used to find the Discussion associated with the page based on a chosen mapping (URL, `pathname`, `<title>`, etc.). If a matching discussion cannot be found, the giscus bot will automatically create a discussion the first time someone leaves a comment or reaction.
+giscus 加载时，会使用 [GitHub Discussions 搜索 API][search-api] 根据选定的映射方式（如 URL、`pathname`、`<title>` 等）来查找与当前页面关联的 discussion。如果找不到匹配的 discussion，giscus bot 就会在第一次有人留下评论或回应时自动创建一个 discussion。
 
-To comment, visitors must authorize the [giscus app][giscus-app] to [post on their behalf][authorization] using the GitHub OAuth flow. Alternatively, visitors can comment on the GitHub Discussion directly. You can moderate the comments on GitHub.
+访客如果想要评论，必须按照 GitHub OAuth 流程授权 [giscus app][giscus-app] [代表他发布][authorization]，或者可以直接在 GitHub Discussion 里评论。你可以在 GitHub 上管理评论。
 
-[giscus]: https://giscus.app
+[giscus]: https://giscus.app/zh-CN
 [discussions]: https://docs.github.com/en/discussions
 [utterances]: https://github.com/utterance/utterances
 [repo]: https://github.com/giscus/giscus
@@ -34,29 +34,29 @@ To comment, visitors must authorize the [giscus app][giscus-app] to [post on the
 
 <!-- configuration -->
 
-If you're using giscus, consider [starring 🌟 giscus on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
+如果你使用了 giscus，请考虑[在 GitHub 上 star 🌟 giscus][repo] 并[为你的仓库][topic-howto]添加 [`giscus`][giscus-topic] 话题！🎉
 
-## Advanced usage
+## 高级用法
 
-You can add additional configurations (e.g. allowing specific origins) by following the [advanced usage guide][advanced-usage].
+你可以依照[高级用法指南][advanced-usage]添加额外配置（例如：仅允许特定来源的请求）。
 
-To use giscus with React, Vue, or Svelte, check out the [giscus component library][giscus-component].
+如果想要在 React、Vue 和 Svelte 中使用 giscus，请查看 [giscus 组件库][giscus-component]。
 
-## Migrating
+## 迁移
 
-If you've previously used other systems that utilize GitHub Issues (e.g. [utterances][utterances], [gitalk][gitalk]), you can [convert the existing issues into discussions][convert]. After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
+如果你使用过利用 GitHub Issue 实现的评论系统（如 [utterances][utterances]、[gitalk][gitalk]），你可[将已有的 issue 转换成 discussion][convert]。转换后，只要确保 discussion 标题与页面的映射关系正确，giscus 就会自动使用这些 discussion。
 
-## Sites using giscus
+## 正在使用 giscus 的网站
 
 - [laymonage.com][laymonage-website]
 - [os.phil-opp.com][os-phil-opp]
 - [Stats and R][statsandr]
 - [Tech Debt Burndown Podcast][techdebtburndown]
-- [**and many more!**][giscus-topic]
+- [**还有更多！**][giscus-topic]
 
-## Contributing
+## 献一份力
 
-See [CONTRIBUTING.md][contributing]
+请参阅 [CONTRIBUTING.md][contributing]。
 
 [giscus-component]: https://github.com/giscus/giscus-component
 [repo]: https://github.com/giscus/giscus
@@ -76,7 +76,7 @@ See [CONTRIBUTING.md][contributing]
 
 ---
 
-This README is available in:
+本 README 有以下语言版本：
 
 - [Arabic (العربية)](README.ar.md)
 - [Català](README.ca.md)
@@ -103,6 +103,6 @@ This README is available in:
 - [简体中文](README.zh-CN.md)
 - [繁體中文](README.zh-TW.md)
 
-[![Powered by Vercel](public/powered-by-vercel.svg)][vercel]
+[![由 Vercel 提供支持](public/powered-by-vercel.svg)][vercel]
 
 [vercel]: https://vercel.com/?utm_source=giscus&utm_campaign=oss
