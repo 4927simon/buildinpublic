@@ -93,14 +93,9 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
             {shouldCreateDiscussion && !data.reactionCount ? (
               t('reactions', { count: 0 })
             ) : (
-              <a
-                href={data.discussion.url}
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-                className="color-text-primary"
-              >
+              <span className="color-text-primary">
                 {t('reactions', { count: data.reactionCount || 0 })}
-              </a>
+              </span>
             )}
           </h4>
           <div className="flex flex-auto items-center justify-center gap-2 text-sm mt-2">
