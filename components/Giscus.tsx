@@ -148,21 +148,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
               </>
             ) : null}
             {shouldShowBranding ? (
-              <em className="color-text-secondary text-sm">
-                <Trans
-                  i18nKey="common:poweredBy"
-                  components={{
-                    a: (
-                      <a
-                        href="https://giscus.app"
-                        target="_blank"
-                        rel="noreferrer noopener nofollow"
-                        className="link-secondary"
-                      />
-                    ),
-                  }}
-                />
-              </em>
+              <em className="color-text-secondary text-sm">Share your progress</em>
             ) : null}
           </div>
           {data.totalCommentCount > 0 ? (
