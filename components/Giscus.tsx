@@ -122,14 +122,9 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
               ) : data.error && !data.backData ? (
                 t('genericError', { message: data.error?.message || '' })
               ) : (
-                <a
-                  href={data.discussion.url}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                  className="color-text-primary"
-                >
+                <span className="color-text-primary">
                   {t('people are building in public today', { count: data.totalCommentCount })}
-                </a>
+                </span>
               )}
             </h4>
             {shouldShowBranding ? (
