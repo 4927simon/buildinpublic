@@ -141,7 +141,7 @@ export default function Comment({
           }`}
           onClick={handleCommentClick}
           dangerouslySetInnerHTML={
-            hidden ? undefined : { __html: processCommentBody(comment.bodyHTML) }
+            hidden ? undefined : undefined }
           }
         >
           {hidden ? (

@@ -39,13 +39,13 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
   const comment: IComment = {
     author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/in/106117',
-      login: 'giscus',
-      url: 'https://github.com/apps/giscus',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/26596636?v=4',
+      login: '4927simon',
+      url: 'https://github.com/4927simon/buildinpublic',
     },
     authorAssociation: 'APP',
     bodyHTML: contentBefore,
-    createdAt: '2021-05-15T13:21:14Z',
+    createdAt: '2023-08-19T13:21:14Z',
     deletedAt: null,
     id: 'onboarding',
     isMinimized: false,
@@ -57,7 +57,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     replies: [],
     replyCount: 0,
     upvoteCount: 0,
-    url: 'https://github.com/giscus/giscus',
+    url: 'https://github.com/4927simon/buildinpublic',
     viewerDidAuthor: false,
     viewerHasUpvoted: false,
     viewerCanUpvote: false,
@@ -153,7 +153,7 @@ export default function Home({
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="bottom"
-          data-theme="preferred_color_scheme"
+          data-theme="/themes/custom_example.css"
           data-lang="en"
         />
       </div>
