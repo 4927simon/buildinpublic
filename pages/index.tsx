@@ -16,19 +16,13 @@ import { ISetConfigMessage } from '../lib/types/giscus';
 import { getThemeUrl } from '../lib/utils';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import Router from 'next/router';
-import getT from 'next-translate/getT';
 import { AvailableLanguage } from '../lib/i18n';
 import { env } from '../lib/variables';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const t = await getT(locale, 'config');
-
   const path = join(process.cwd(), `README.md`);
   const readme = readFileSync(path, 'utf-8');
   const contents = readme.split('<!-- configuration -->');
-  const [afterConfig] = contents[1].split('<!-- end -->');
-
-  contents[1] = `${afterConfig}\n## ${t('tryItOut')} 👇👇👇\n`;
 
   const token = await getAppAccessToken('giscus/giscus').catch(() => '');
   const [contentBefore, contentAfter] = await Promise.all(
