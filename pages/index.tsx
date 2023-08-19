@@ -146,8 +146,8 @@ export default function Home({
           src="/client.js"
           data-repo="4927simon/buildinpublic"
           data-repo-id="R_kgDOKIz6vw="
-          data-category="[ENTER CATEGORY NAME HERE]"
-          data-category-id="[ENTER CATEGORY ID HERE]"
+          data-category="announcements"
+          data-category-id="1"
           data-mapping="specific"
           data-term="Build in public"
           data-theme="preferred_color_scheme"
@@ -157,12 +157,6 @@ export default function Home({
           data-lang={locale}
           data-strict="1"
         />
-        <a
-          className="block w-max mx-auto mb-6"
-          href="https://vercel.com/?utm_source=giscus&utm_campaign=oss"
-        >
-          <img src="/powered-by-vercel.svg" alt="Powered by Vercel" />
-        </a>
       </div>
     </main>
   );
