@@ -33,45 +33,6 @@ To comment, visitors must authorize the [giscus app][giscus-app] to [post on the
 [authorization]: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
 
 <!-- configuration -->
-
-If you're using giscus, consider [starring 🌟 giscus on GitHub][repo] and adding the [`giscus`][giscus-topic] topic [to your repository][topic-howto]! 🎉
-
-## Advanced usage
-
-You can add additional configurations (e.g. allowing specific origins) by following the [advanced usage guide][advanced-usage].
-
-To use giscus with React, Vue, or Svelte, check out the [giscus component library][giscus-component].
-
-## Migrating
-
-If you've previously used other systems that utilize GitHub Issues (e.g. [utterances][utterances], [gitalk][gitalk]), you can [convert the existing issues into discussions][convert]. After the conversion, just make sure that the mapping between the discussion titles and the pages are correct, then giscus will automatically use the discussions.
-
-## Sites using giscus
-
-- [laymonage.com][laymonage-website]
-- [os.phil-opp.com][os-phil-opp]
-- [Stats and R][statsandr]
-- [Tech Debt Burndown Podcast][techdebtburndown]
-- [**and many more!**][giscus-topic]
-
-## Contributing
-
-See [CONTRIBUTING.md][contributing]
-
-[giscus-component]: https://github.com/giscus/giscus-component
-[repo]: https://github.com/giscus/giscus
-[giscus-topic]: https://github.com/topics/giscus
-[topic-howto]: https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics
-[advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
-[utterances]: https://github.com/utterance/utterances
-[gitalk]: https://github.com/gitalk/gitalk
-[convert]: https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion
-[laymonage-website]: https://laymonage.com/posts/giscus
-[os-phil-opp]: https://os.phil-opp.com
-[statsandr]: https://statsandr.com
-[techdebtburndown]: https://techdebtburndown.com
-[contributing]: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md
-
 <!-- end -->
 
 ---

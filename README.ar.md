@@ -34,45 +34,6 @@
 [authorization]: https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps
 
 <!-- configuration -->
-
-إذا كنت تستخدم غيسكوس من فضلك قم [بعمل نجمة 🌟 لنا على جيت هب][repo] وأضف موضوع [`giscus`][giscus-topic] [إلى مستودع موقعك][topic-howto]! 🎉
-
-## الاستخدام المتقدم
-
-يمكنك إضافة خيارات تهيئة إضافية (مثلا السماح بالوصول عبر أصول معينة) من خلال [دليل الاستخدام المتقدم][advanced-usage].
-
-لاستخدام غيسكوس مع أطر عمل رياكت أو فيو أو سيفلت، اطلع على [مكتبة مكون غيسكوس][giscus-component].
-
-## الترحيل
-
-إذا استخدمت سابقا أي أنظمة تستغل قضايا جيت هب (مثل [utterances][utterances] أو [gitalk][gitalk])، يمكنك [تحويل القضايا الحالية إلى مناقشات][convert]. بعد التحويل تأكد من صحة طريقة الربط بين عناوين المناقشات والصفحات، وبعدها سيتخدم غيسكوس المناقشات بشكل تلقائي.
-
-## مواقع تستخدم غيسكوس
-
-- [laymonage.com][laymonage-website]
-- [os.phil-opp.com][os-phil-opp]
-- [Stats and R][statsandr]
-- [Tech Debt Burndown Podcast][techdebtburndown]
-- [**ومواقع أخرى عديدة!**][giscus-topic]
-
-## المساهمة
-
-اطلع على [CONTRIBUTING.md][contributing]
-
-[giscus-component]: https://github.com/giscus/giscus-component
-[repo]: https://github.com/giscus/giscus
-[giscus-topic]: https://github.com/topics/giscus
-[topic-howto]: https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics
-[advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
-[utterances]: https://github.com/utterance/utterances
-[gitalk]: https://github.com/gitalk/gitalk
-[convert]: https://docs.github.com/en/discussions/managing-discussions-for-your-community/moderating-discussions#converting-an-issue-to-a-discussion
-[laymonage-website]: https://laymonage.com/posts/giscus
-[os-phil-opp]: https://os.phil-opp.com
-[statsandr]: https://statsandr.com
-[techdebtburndown]: https://techdebtburndown.com
-[contributing]: https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md
-
 <!-- end -->
 
 ---
