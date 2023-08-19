@@ -235,7 +235,7 @@ export default function CommentBox({
           ) : null}
           {token ? (
             <button
-              className="btn btn-primary items-center ml-1 rounded-md border"
+              className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700"
               type="submit"
               disabled={(token && !input.trim()) || isSubmitting}
             >
@@ -243,11 +243,12 @@ export default function CommentBox({
             </button>
           ) : (
             <a
-              className="btn btn-primary inline-flex items-center ml-1 rounded-md border hover:no-underline"
+              className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700 inline-flex hover:no-underline"
               target="_top"
               href={loginUrl}
             >
-              <MarkGithubIcon className="mr-2" fill="currentColor" /> {t('signInWithGitHub')}
+              <MarkGithubIcon className="mr-2 w-6 h-6" fill="currentColor" />
+              {t('signInWithGitHub')}
             </a>
           )}
         </div>
