@@ -353,7 +353,7 @@ export default function Home({
               <p className="text-base font-semibold text-gray-900">Other</p>
 
               <ul className="mt-6 space-y-5">
-                <li>
+                <li className="mb-2">
                   <a
                     href="https://github.com/4927simon/buildinpublic/blob/813de4b651da3351d2f9d66cd3e17078589b9529/CODE_OF_CONDUCT.md"
                     title=""
@@ -364,7 +364,7 @@ export default function Home({
                   </a>
                 </li>
 
-                <li>
+                <li className="mb-2">
                   <a
                     href="#"
                     title=""
@@ -375,7 +375,7 @@ export default function Home({
                   </a>
                 </li>
 
-                <li>
+                <li className="mb-2">
                   <a
                     href="#"
                     title=""
