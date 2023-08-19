@@ -121,7 +121,7 @@ export default function Home({
   return (
     <main className="gsc-homepage-bg min-h-screen w-full" data-theme={theme}>
       <Head>
-        <title>giscus</title>
+        <title>Build in public | #buildinpublic</title>
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
       <div className="color-text-primary w-full max-w-3xl mx-auto p-2">
