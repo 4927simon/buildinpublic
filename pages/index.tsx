@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ComponentProps, useContext, useEffect, useState } from 'react';
-import Comment from '../components/Comment';
 import { Reactions } from '../lib/reactions';
 import { IComment, IReactionGroups } from '../lib/types/adapter';
 import { renderMarkdown } from '../services/github/markdown';
@@ -65,15 +65,15 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 }
 
 type DirectConfig = ComponentProps<typeof Configuration>['directConfig'];
-type DirectConfigHandler = ComponentProps<typeof Configuration>['onDirectConfigChange'];
+//type DirectConfigHandler = ComponentProps<typeof Configuration>['onDirectConfigChange'];
 
 export default function Home({
-  comment,
-  contentAfter,
+  //comment,
+  //contentAfter,
   locale,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { theme, setTheme } = useContext(ThemeContext);
-  const [directConfig, setDirectConfig] = useState<DirectConfig>({
+  const [directConfig] = useState<DirectConfig>({
     theme: 'preferred_color_scheme',
     themeUrl: `${env.app_host}/themes/custom_example.css`,
     reactionsEnabled: true,
@@ -84,8 +84,8 @@ export default function Home({
   const themeUrl = useDebounce(directConfig.themeUrl);
   const configTheme = getThemeUrl(directConfig.theme, themeUrl);
 
-  const handleDirectConfigChange: DirectConfigHandler = (key, value) =>
-    setDirectConfig({ ...directConfig, [key]: value });
+  //const handleDirectConfigChange: DirectConfigHandler = (key, value) =>
+  //setDirectConfig({ ...directConfig, [key]: value });
 
   useEffect(() => {
     setTheme(configTheme);
@@ -124,15 +124,45 @@ export default function Home({
         <title>Build in public | #buildinpublic</title>
         <meta name="giscus:backlink" content={env.app_host} />
       </Head>
-      <div className="color-text-primary w-full max-w-3xl mx-auto p-2">
-        <Comment comment={comment}>
-          <Configuration
-            directConfig={directConfig}
-            onDirectConfigChange={handleDirectConfigChange}
-          />
-          <div className="markdown p-4 pt-0" dangerouslySetInnerHTML={{ __html: contentAfter }} />
-        </Comment>
 
+      <section className="py-10 bg-white sm:pt-16">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="flex items-center justify-center">
+              <div className="w-20 h-20 -mr-6 overflow-hidden bg-gray-300 rounded-full">
+                <img
+                  className="object-cover w-full h-full"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/2/female-avatar-1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div className="relative overflow-hidden bg-gray-300 border-4 border-white rounded-full w-28 h-28">
+                <img
+                  className="object-cover w-full h-full"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/2/male-avatar-1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div className="w-20 h-20 -ml-6 overflow-hidden bg-gray-300 rounded-full">
+                <img
+                  className="object-cover w-full h-full"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/2/female-avatar-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <h2 className="mt-8 text-3xl font-bold leading-tight text-black lg:mt-12 sm:text-4xl lg:text-5xl">
+              Join <span className="border-b-8 border-yellow-300">14,752</span> other makers
+              building in public
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <div className="color-text-primary w-full max-w-3xl mx-auto p-2 mb-24">
         <div id="comments" className="giscus w-full my-8" />
         <Script
           src="/client.js"

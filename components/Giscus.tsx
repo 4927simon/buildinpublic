@@ -72,9 +72,6 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
   const shouldCreateDiscussion = data.isNotFound && !number;
   const shouldShowBranding = !!data.discussion.url;
 
-  const shouldShowReplyCount =
-    !data.error && !data.isNotFound && !data.isLoading && data.totalReplyCount > 0;
-
   const shouldShowCommentBox =
     (data.isRateLimited && !token) ||
     (!data.isLoading && !data.isLocked && (!data.error || (data.isNotFound && !number)));
@@ -122,7 +119,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
           <div className="gsc-left-header">
             <h4 className="gsc-comments-count">
               {shouldCreateDiscussion && !data.totalCommentCount ? (
-                t('comments', { count: 0 })
+                t('people are building in public today', { count: 0 })
               ) : data.error && !data.backData ? (
                 t('genericError', { message: data.error?.message || '' })
               ) : (
@@ -132,23 +129,15 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
                   rel="noreferrer noopener nofollow"
                   className="color-text-primary"
                 >
-                  {t('comments', { count: data.totalCommentCount })}
+                  {t('people are building in public today', { count: data.totalCommentCount })}
                 </a>
               )}
             </h4>
-            {shouldShowReplyCount ? (
-              <>
-                <h4 className="gsc-comments-count-separator">·</h4>
-                <h4 className="gsc-replies-count">
-                  {t('replies', {
-                    count: data.totalReplyCount,
-                    plus: data.numHidden > 0 ? '+' : '',
-                  })}
-                </h4>
-              </>
-            ) : null}
             {shouldShowBranding ? (
-              <span className="color-text-secondary text-sm">Share your progress</span>
+              <>
+                <span className="color-text-secondary text-sm px-1">•</span>
+                <div className="color-text-secondary text-sm">Share your progress</div>
+              </>
             ) : null}
           </div>
           {data.totalCommentCount > 0 ? (

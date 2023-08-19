@@ -5,10 +5,10 @@
     "other": "{{count}} reactions"
   },
   "comment": "Comment",
-  "comments": {
-    "0": "{{count}} comments",
-    "one": "{{count}} comment",
-    "other": "{{count}} comments"
+  "people are building in public today": {
+    "0": "{{count}} people are building in public today",
+    "one": "{{count}} person is building in public today",
+    "other": "{{count}} people are building in public today"
   },
   "reply": "Reply",
   "replies": {
